@@ -1,0 +1,181 @@
+:root{
+    --primary-Nutmeg: hsl(14, 45%, 36%);
+    --primary-Nutmeg-light: hsla(14, 45%, 36%, .2);
+    --primary-Dark-Raspberry: hsl(332, 51%, 32%);
+    --primary-light-Raspberry: hsla(332, 42%, 47%, 0.1);
+
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Young-serif;
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: outfit;
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: 400, 600, 700;
+}
+body{
+    align-items: center;
+    background-color: var(--primary-Nutmeg-light);
+    display: flex;
+    flex-direction: column;
+    font-family: outfit, Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+/* main container */
+.container{
+    background-color: var(--White);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto;
+    padding: 1.5rem;
+    width: 100%;
+    
+}
+@media screen and (min-width: 900px){
+    .container{
+        max-width: 55%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    } 
+    .image-container{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        max-width: 55%;
+        padding: 1.5rem;
+       background-color: var(--White);
+    }
+    .image-container img{
+        border-radius: 10px;
+    }
+}
+/* image */
+.image-container img{
+    height: 100%;
+    width: 100%;
+}
+/* first part after picture */
+h1 {
+    color: var(--Dark-Charcoal);
+    font-family: Young-serif, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.main-head-paragraph p{
+    color: var(--Wenge-Brown);
+    font-family: outfit, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+/* Prep-time */
+.prep-container{
+    background-color: var(--primary-light-Raspberry);
+    border-radius: 10px;
+    color: var(--Wenge-Brown);
+    display: flex;
+    flex-direction: column;
+    font-family: outfit, Arial, Helvetica, sans-serif;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+.prep-container h2{
+    font-family: outfit, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-Dark-Raspberry);
+}
+.prep-container ul{
+    font-size: 1.2rem;
+    line-height: 2;
+    list-style-position: inside;
+    padding-left: .6rem;
+}
+.prep-container ul li p{
+    display: inline;
+    line-height: 1.5;
+    padding-left: .4rem;
+}
+.darker{
+    color: var(--Wenge-Brown);
+    font-weight: bold;
+}  
+/* Ingredients */
+ h2{
+    color:var(--primary-Nutmeg);
+    font-family: young-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.3rem;
+}
+.ingred-container ul{
+    color: var(--Wenge-Brown);
+    line-height: 2;
+    list-style-position: inside;
+    padding-left: .4rem;
+}
+.ingred-container ul span{
+    padding-left: .8rem;
+}
+/* Instruction */
+.instruction-container ol{
+    padding-left: 1.5rem;
+}
+.instruction-container ol li{
+    padding-bottom: 1rem;
+}
+.instruction-container li::marker{
+    color: var(--primary-Nutmeg);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.instruction-container ol li p{
+    padding-left: 1rem;
+    color: var(--Wenge-Brown);
+}
+/* nutrition-container */
+.nutrition-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.nutrition-container p{
+    color: var(--Wenge-Brown);
+    line-height: 1.5;
+}
+.grid{
+    color: var(--Wenge-Brown);
+    display: grid;
+    grid-template-rows: auto;
+}
+.grid .rows{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid .rows:nth-child(n){
+    border-bottom: 1px solid lightgray;
+    padding-block: .8rem;
+}
+.grid .rows:last-child{
+    border: none;
+}
+.grid .rows .padding-left{
+    padding-left: 2rem;
+}
+.dark-brown{
+    color: var(--primary-Nutmeg);
+    font-weight: bold;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
